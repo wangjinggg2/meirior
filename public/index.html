@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美容店预约系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>美容店预约系统</h1>
+
+        <div class="form-container">
+            <h2>添加/编辑预约</h2>
+            <form id="appointment-form">
+                <input type="hidden" id="appointment-id">
+                <input type="text" id="customer-name" placeholder="顾客姓名" required>
+                <input type="tel" id="phone" placeholder="电话" required>
+                <input type="text" id="service" placeholder="预约项目" required>
+                <input type="datetime-local" id="appointment-time" required>
+                <button type="submit">保存预约</button>
+            </form>
+        </div>
+
+        <div class="search-container">
+            <h2>查询预约</h2>
+            <input type="date" id="search-date">
+            <button id="search-button">按日期查询</button>
+        </div>
+
+        <div class="table-container">
+            <h2>预约列表</h2>
+            <table id="appointments-table">
+                <thead>
+                    <tr>
+                        <th>顾客姓名</th>
+                        <th>电话</th>
+                        <th>预约项目</th>
+                        <th>预约时间</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 预约数据将在这里动态生成 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
